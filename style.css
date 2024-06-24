@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo {
+    width: 200px;
+    display: flex;
+    justify-content: flex-start; 
+    padding-left: 20px;
+}
+
+.tosa {
+    width:400px;
+    height: 175px;
+}
+
+.navegation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: flex-end; 
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.nos-acompanhe {
+    padding-right: 37px;
+}
+
+.assinatura {
+    padding: 5px;
+    color: red;
+    background-color: #fff;
+    border-color: red;
+    border-radius: 10px;
+    cursor: pointer;
+} 
+
+ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding-left: 0px;
+    margin-top: 1px;
+    display: flex; /* Ativa o Flexbox */
+    justify-content: right;
+}
+
+ul li {
+    padding: 2.5px;
+    text-align: right; /* Centraliza o texto dentro dos itens */
+} 
+
+nav {
+    width: 100%; /* Garante que o nav ocupe 100% da largura */
+    background-color: black;
+    overflow: auto;
+    clear: both;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding-left: 0px;
+    margin-top: 1px;
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Distribui os itens uniformemente */
+}
+
+nav ul li {
+    flex-grow: 1; /* Permite que os itens cresçam igualmente */
+    text-align: center; /* Centraliza o texto dentro dos itens */
+}
+
+nav ul a {
+    color:#fff;
+    text-decoration: none; /* Remove a sublinha padrão */
+    font-size: 1.2em;
+    padding: 8px 50px; 
+    line-height: 2em;
+    display: block; /* Torna o link um bloco para preencher todo o item da lista */
+}
+
+.home {
+    background-color: rgb(140, 140, 140);
+}
+
+.conteudo {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo .direita{
+    padding-left: 20px;
+}
+
+.conteudo .direita .fofo {
+    width: 200px;
+}
+
+.conteudo .meio {
+
+}
+
+.conteudo .meio .tres-cachorro {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.conteudo .meio .tres-cachorro .foto-meio {
+    width: 200px;
+    height: 300px;
+}
+
+.conteudo .meio .tres-button {
+    color: red;
+    border-color: red;
+    background-color: #fff;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.tres-button {
+    color: red;
+    border-color: red;
+    background-color: #fff;
+}
+
+.conteudo .esquerda {
+    padding-right: 20px;
+}
+
+.conteudo .esquerda .video {
+    width: 350px;
+    height: 225px;
+}
+
+nav.links a:hover {
+    background-color: rgb(104, 53, 53); /* Cor de fundo ao passar o mouse */
+}
+
+@media only screen and (max-width: 767px) {
+    .navegation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: 150px;
+        padding-left: 0;
+    }
+
+    .tosa {
+        width: 300px;
+        height: auto;
+    }
+
+    .social-container {
+        flex-direction: row;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+
+    .conteudo .direita,
+    .conteudo .meio,
+    .conteudo .esquerda {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .conteudo .direita .fofo,
+    .conteudo .meio .foto-meio,
+    .conteudo .esquerda .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo .meio .tres-cachorro {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .logo {
+        width: 180px;
+    }
+
+    .tosa {
+        width: 350px;
+        height: auto;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15px;
+    }
+
+    .conteudo .direita,
+    .conteudo .meio,
+    .conteudo .esquerda {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .conteudo .direita .fofo,
+    .conteudo .meio .foto-meio,
+    .conteudo .esquerda .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo .meio .tres-cachorro {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .logo {
+        width: 200px;
+    }
+
+    .tosa {
+        width: 400px;
+        height: auto;
+    }
+
+    .conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 20px;
+    }
+
+    .conteudo .direita,
+    .conteudo .meio,
+    .conteudo .esquerda {
+        padding: 20px;
+        width: 30%;
+    }
+
+    .conteudo .direita .fofo,
+    .conteudo .meio .foto-meio,
+    .conteudo .esquerda .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo .meio .tres-cachorro {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .logo {
+        width: 220px;
+    }
+
+    .tosa {
+        width: 450px;
+        height: auto;
+    }
+
+    .conteudo {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 25px;
+    }
+
+    .conteudo .direita,
+    .conteudo .meio,
+    .conteudo .esquerda {
+        padding: 25px;
+        width: 30%;
+    }
+
+    .conteudo .direita .fofo,
+    .conteudo .meio .foto-meio,
+    .conteudo .esquerda .video {
+        width: 100%;
+        height: auto;
+    }
+
+    .conteudo .meio .tres-cachorro {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
